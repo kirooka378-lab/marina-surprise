@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160f24">
+<title>A little something for Marina 💌</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+:root{--pink:#ff9fc8;--cream:#fff3f8;--muted:#d9c5d2}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--cream);font-family:'Cairo',sans-serif;background:radial-gradient(ellipse at 15% 15%,#512849 0,transparent 38%),radial-gradient(ellipse at 85% 80%,#28345c 0,transparent 42%),linear-gradient(145deg,#100d1c,#211326 55%,#101629);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.2;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:37px 37px}
+.wrap{min-height:100vh;display:grid;place-items:center;padding:28px 16px;position:relative}
+.card{width:min(100%,520px);padding:34px 28px;border:1px solid #ffffff24;border-radius:28px;background:#ffffff0d;box-shadow:0 24px 80px #0006;backdrop-filter:blur(16px);text-align:center;position:relative;overflow:hidden}
+.spark{font-size:30px;letter-spacing:10px;margin-bottom:14px;animation:float 3s ease-in-out infinite}
+h1{font-size:clamp(27px,7vw,39px);margin:8px 0;color:#ffe5f0}
+.sub{color:var(--muted);line-height:1.9;margin:8px auto 24px;max-width:360px}
+.eyebrow{font-family:'Playfair Display',serif;color:var(--pink);font-size:16px;letter-spacing:2px;direction:ltr}
+input{width:100%;padding:15px 18px;border:1px solid #ffffff38;border-radius:14px;background:#100d1c99;color:white;font:600 17px 'Cairo',sans-serif;text-align:center;outline:none;transition:.2s}
+input:focus{border-color:var(--pink);box-shadow:0 0 0 3px #ff9fc822}
+button{border:0;border-radius:14px;padding:13px 25px;margin-top:14px;background:linear-gradient(100deg,#ff9fc8,#ffd1df);color:#32172b;font:800 16px 'Cairo',sans-serif;cursor:pointer;box-shadow:0 8px 25px #ff9fc833;transition:transform .2s}
+button:hover{transform:translateY(-2px)}
+.error{min-height:26px;color:#ffc1d9;font-size:13px;margin-top:8px}
+.hidden{display:none}
+.letter{animation:appear .8s ease both}
+.note{font-size:clamp(17px,4.5vw,20px);line-height:2.15;text-align:center;white-space:pre-line;margin:25px 0 10px;color:#fff5fa}
+.note .english{font-family:'Playfair Display',serif;font-style:italic;direction:ltr;display:block;line-height:1.7;color:#ffd1e5;margin:20px 0}
+.footer{margin-top:28px;color:#d8bdce;font-size:13px}
+.heart{display:inline-block;color:#ff9fc8;animation:pulse 1.5s infinite}
+.back{background:transparent;border:1px solid #ffffff35;color:#ffe5f0;box-shadow:none;font-size:13px}
+.floaties{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.floaties span{position:absolute;bottom:-40px;opacity:0;animation:rise linear infinite}
+.floaties span:nth-child(1){left:8%;animation-duration:13s;font-size:20px}
+.floaties span:nth-child(2){left:25%;animation-duration:17s;animation-delay:3s;font-size:15px}
+.floaties span:nth-child(3){left:76%;animation-duration:14s;animation-delay:1s;font-size:22px}
+.floaties span:nth-child(4){left:91%;animation-duration:18s;animation-delay:5s;font-size:16px}
+.floaties span:nth-child(5){left:54%;animation-duration:16s;animation-delay:7s;font-size:19px}
+@keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.65}100%{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+@keyframes pulse{50%{transform:scale(1.25)}}
+@keyframes float{50%{transform:translateY(-7px)}}
+@keyframes appear{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+@media(max-width:420px){.card{padding:28px 20px;border-radius:23px}}
+</style>
+</head>
+<body>
+<div class="floaties" aria-hidden="true"><span>♡</span><span>✦</span><span>♥</span><span>♡</span><span>✨</span></div>
+<main class="wrap">
+  <section class="card" id="gate">
+    <div class="spark">✦ ♡ ✦</div>
+    <div class="eyebrow">A LITTLE SOMETHING FOR YOU</div>
+    <h1>Hey, Marina! 💌</h1>
+    <p class="sub">في حاجة صغيرة مستنياكي هنا…<br>بس الأول، كلمة السر؟ 👀</p>
+    <form id="unlockForm">
+      <input id="password" type="password" placeholder="Enter the password" autocomplete="off" aria-label="Password">
+      <button type="submit">Unlock your message ✨</button>
+      <div class="error" id="error" role="status"></div>
+    </form>
+    <div class="footer">Made with a little thought & a little attitude <span class="heart">♥</span></div>
+  </section>
+
+  <section class="card letter hidden" id="message">
+    <div class="spark">🌙 ✨ ♡</div>
+    <div class="eyebrow">JUST FOR YOU, MARINA</div>
+    <h1>Before your birthday… 💗</h1>
+    <div class="note">
+      اولا فاضل 5 ايام وتكبر احلى مارينا ف الدنيا ومش معنى اننا متخانقين اني مفكرش ف عيد ميلادِك ✨♥
+
+      <span class="english">What does it mean that the moon is full but Marina's birthday hasn't arrived yet? ♥♥✨</span>
+
+      وثانيا انا لسة مدايق برضو هااا😏
+    </div>
+    <div class="footer">A tiny reminder that I didn't forget. <span class="heart">♥</span></div>
+    <button class="back" id="again">Read it again ↻</button>
+  </section>
+</main>
+<script>
+const form=document.getElementById('unlockForm');
+const pass=document.getElementById('password');
+const error=document.getElementById('error');
+const gate=document.getElementById('gate');
+const message=document.getElementById('message');
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  if(pass.value.trim().toLowerCase()==='marina'){
+    gate.classList.add('hidden'); message.classList.remove('hidden');
+  }else{
+    error.textContent='مش دي كلمة السر… جربي تاني 😉';
+    pass.value=''; pass.focus();
+  }
+});
+document.getElementById('again').addEventListener('click',()=>{
+  message.classList.add('hidden'); gate.classList.remove('hidden'); pass.value=''; error.textContent='';
+});
+</script>
+</body>
+</html>
